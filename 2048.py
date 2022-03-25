@@ -1,5 +1,3 @@
-#-*- coding:utf-8 -*-
-
 import curses
 from random import randrange, choice 
 from collections import defaultdict
@@ -200,7 +198,7 @@ def main(stdscr):
     curses.use_default_colors()
 
     # 设置终结状态最大数值为 32，可以自行修改
-    game_field = GameField(win=32)
+    game_field = GameField(win=131072)
 
 
     state = 'Init'
@@ -209,4 +207,3 @@ def main(stdscr):
         state = state_actions[state]()
 
 curses.wrapper(main)
-
